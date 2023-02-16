@@ -1,8 +1,9 @@
 
+#region using
 global using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using JokesWebApp.Data;
+#endregion
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +28,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
